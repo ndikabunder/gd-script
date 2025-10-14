@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://bc3c72heejk41"]
 
-[ext_resource type="Script" uid="uid://dwpltk4kjhfmq" path="res://modifying_node.gd" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://dln44ku2s2s1i" path="res://variable_1.gd" id="1_ig7tw"]
 
 [node name="Main" type="Node"]
-script = ExtResource("2_0xm2m")
+script = ExtResource("1_ig7tw")
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 8
