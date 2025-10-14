@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bc3c72heejk41"]
+
+[ext_resource type="Script" uid="uid://dwpltk4kjhfmq" path="res://modifying_node.gd" id="2_0xm2m"]
+
+[node name="Main" type="Node"]
+script = ExtResource("2_0xm2m")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -182.60867
+offset_top = -105.0
+offset_right = 182.60867
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 51
+text = "This is Label"
+horizontal_alignment = 1
+vertical_alignment = 1
