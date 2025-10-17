@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bc3c72heejk41"]
+[gd_scene load_steps=3 format=3 uid="uid://bc3c72heejk41"]
 
-[ext_resource type="Script" uid="uid://b6fy78yvref7v" path="res://signals.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://epla6tuikhgv" path="res://main_1.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://p7usum8nx7yj" path="res://classes.gd" id="2_h2yge"]
 
-[node name="Main" type="Node"]
-script = ExtResource("1_ig7tw")
+[node name="Main" type="Node" node_paths=PackedStringArray("character_to_kill")]
+script = ExtResource("1_0xm2m")
+character_to_kill = NodePath("Character")
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 8
@@ -38,6 +40,17 @@ text = "PRINT MONEY"
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
-[connection signal="level_up" from="." to="." method="_on_level_up"]
+[node name="Character" type="Node2D" parent="."]
+script = ExtResource("2_h2yge")
+profession = "Adventure"
+
+[node name="Character2" type="Node2D" parent="."]
+script = ExtResource("2_h2yge")
+profession = "Knight"
+
+[node name="Character3" type="Node2D" parent="."]
+script = ExtResource("2_h2yge")
+profession = "Mage"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
